@@ -23,7 +23,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="cooord2">
+  <widget class="QLineEdit" name="coord2">
    <property name="geometry">
     <rect>
      <x>780</x>
