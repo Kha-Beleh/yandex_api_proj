@@ -12,12 +12,8 @@ class MyWidget(QMainWindow):
         self.search.clicked.connect(self.show_map)
 
     def show_map(self):
-        print(self.coord1.text())
-        print(self.coord2.text())
-        map_request = f"https://static-maps.yandex.ru/1.x/?ll={self.coord1.text()},{self.coord2.text()}&z=4&&size=450,450&l=sat "
+        map_request = f"https://static-maps.yandex.ru/1.x/?ll={self.coord1.text()},{self.coord2.text()}&z=16&&size=450,450&l=sat"
         print(map_request)
-        print('https://static-maps.yandex.ru/1.x/?ll=133.794557,-25.694111&z=4&&size=450,450&l=sat')
-        print(map_request == 'https://static-maps.yandex.ru/1.x/?ll=133.794557,-25.694111&z=4&&size=450,450&l=sat')
         response = requests.get(map_request)
 
         if not response:
